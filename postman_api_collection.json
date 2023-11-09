@@ -1,0 +1,507 @@
+{
+	"info": {
+		"_postman_id": "b1bd79be-3964-47b7-a1e6-9cdaf19745e6",
+		"name": "Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25376306"
+	},
+	"item": [
+		{
+			"name": "User APIs",
+			"item": [
+				{
+					"name": "Create user",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"{{username}}\",\n    \"password\": \"{{password}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/users",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/users",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/users",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Destination APIs",
+			"item": [
+				{
+					"name": "Create Destination",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Name\",\n    \"description\": null,\n    \"location\": \"Delhi\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/destinations",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"destinations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Destination",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/destinations/1667d277-46a0-46cc-a78a-d51f1193cae3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"destinations",
+								"1667d277-46a0-46cc-a78a-d51f1193cae3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Destinations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/destinations?page=1&limit=10",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"destinations"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Destination",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/destinations/1667d277-46a0-46cc-a78a-d51f1193cae3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"destinations",
+								"1667d277-46a0-46cc-a78a-d51f1193cae3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Itinerary APIs",
+			"item": [
+				{
+					"name": "Create Itinerary",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"activities\": \"activities\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/itineraries/c9b1bffb-3d20-4bee-afb4-e72731a18261",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"itineraries",
+								"c9b1bffb-3d20-4bee-afb4-e72731a18261"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Itinerary",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/itineraries/6dbbc9f3-1cfd-4fb8-9884-075dffe6a3da",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"itineraries",
+								"6dbbc9f3-1cfd-4fb8-9884-075dffe6a3da"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Itinerary",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/itineraries?page=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"itineraries"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Itinerary",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/itineraries/78cd6b1b-c2a5-41bf-a819-f6c46201eb5e",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"itineraries",
+								"78cd6b1b-c2a5-41bf-a819-f6c46201eb5e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Expense APIs",
+			"item": [
+				{
+					"name": "Create Expense",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": null,\n    \"amount\": \"210\",\n    \"category\": \"Dance\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/expenses/6dbbc9f3-1cfd-4fb8-9884-075dffe6a3da",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"expenses",
+								"6dbbc9f3-1cfd-4fb8-9884-075dffe6a3da"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Single Expense",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/expenses/ddf8157d-ab75-4eae-8366-be6f0199e491",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"expenses",
+								"ddf8157d-ab75-4eae-8366-be6f0199e491"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Expenses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/expenses?low=100&high=10000&page=1&limit=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"expenses"
+							],
+							"query": [
+								{
+									"key": "low",
+									"value": "100"
+								},
+								{
+									"key": "high",
+									"value": "10000"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Expenses by Category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/expenses/category/travel?page=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"expenses",
+								"category",
+								"travel"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "23",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete  Expense",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/expenses/ddf8157d-ab75-4eae-8366-be6f0199e491",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"expenses",
+								"ddf8157d-ab75-4eae-8366-be6f0199e491"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/logout",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:8080",
+			"type": "string"
+		},
+		{
+			"key": "username",
+			"value": "user1",
+			"type": "string"
+		},
+		{
+			"key": "password",
+			"value": "pass",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMSIsInJvbGVzIjoiVVNFUiIsImlzQWNjb3VudEV4cGlyZWQiOiJmYWxzZSIsImlzQWNjb3VudExvY2tlZCI6ImZhbHNlIiwiaXNDcmVkZW50aWFsc0V4cGlyZWQiOiJmYWxzZSIsImlhdCI6MTY5OTUwNjQ3OCwiZXhwIjoxNjk5NTEwMDc4fQ.c6caY3ymgOC9Xh-L-AmL1l1ZXn8GeqeVhBLAqqxoq5dCQvFqerA9rCcBan3zPKaFgK7dUkYaY8BjEQOMX5GGnQ",
+			"type": "string"
+		}
+	]
+}
