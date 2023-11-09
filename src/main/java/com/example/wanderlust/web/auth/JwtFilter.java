@@ -1,4 +1,4 @@
-package com.example.wanderlust.web.filter;
+package com.example.wanderlust.web.auth;
 
 import com.example.wanderlust.service.JwtTokenService;
 import jakarta.servlet.FilterChain;
@@ -25,7 +25,6 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
-@Component
 public class JwtFilter extends OncePerRequestFilter {
 
     private final JwtTokenService jwtTokenService;
