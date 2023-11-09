@@ -37,3 +37,4 @@ After authentication, the JWT is set in the response header with header name: "t
 # Set Up
 * The need environment variabls can be found in the env.txt file.
 * The app uses Java 17 as the base version.
+* A postman collection file (JSON format) has also been included for self testing of the APIs.
